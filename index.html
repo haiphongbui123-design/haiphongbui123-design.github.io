@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creative Designer | Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    
+    <style>
+        /* --- RESET & GLOBAL STYLES --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0a0a0a;
+            color: #ffffff;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 3rem;
+            text-transform: uppercase;
+            letter-spacing: -1px;
+        }
+
+        /* --- NAVIGATION --- */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(10, 10, 10, 0.85);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            border-bottom: 1px solid #1a1a1a;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 0;
+        }
+
+        .logo {
+            font-weight: 800;
+            font-size: 1.5rem;
+            letter-spacing: -1px;
+        }
+
+        .logo span {
+            color: #ff3366; /* Accent Color */
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a:hover {
+            color: #ff3366;
+        }
+
+        /* --- HERO SECTION --- */
+        #hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding-top: 80px; /* Offset for fixed nav */
+        }
+
+        .hero-content {
+            max-width: 800px;
+        }
+
+        .hero-content h1 {
+            font-size: 4rem;
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            letter-spacing: -2px;
+        }
+
+        .hero-content h1 span {
+            color: #ff3366;
+        }
+
+        .hero-content p {
+            font-size: 1.25rem;
+            color: #a0a0a0;
+            margin-bottom: 2.5rem;
+            font-weight: 300;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: #ff3366;
+            color: #ffffff;
+            padding: 0.8rem 2rem;
+            font-weight: 600;
+            border-radius: 4px;
+            transition: transform 0.2s ease, background-color 0.2s ease;
+        }
+
+        .btn:hover {
+            background-color: #e02253;
+            transform: translateY(-2px);
+        }
+
+        /* --- WORK / PORTFOLIO GRID --- */
+        #work {
+            padding: 8rem 0;
+            border-top: 1px solid #1a1a1a;
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2.5rem;
+        }
+
+        .portfolio-item {
+            background-color: #121212;
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid #1a1a1a;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+
+        .portfolio-item:hover {
+            transform: translateY(-5px);
+            border-color: #ff3366;
+        }
+
+        /* Placeholder image styles. Replace with actual images using src="" */
+        .portfolio-img {
+            width: 100%;
+            height: 250px;
+            background-color: #252525;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #555;
+            font-weight: 600;
+            object-fit: cover;
+        }
+
+        .portfolio-info {
+            padding: 1.5rem;
+        }
+
+        .portfolio-info span {
+            color: #ff3366;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .portfolio-info h3 {
+            font-size: 1.3rem;
+            margin: 0.5rem 0;
+        }
+
+        /* --- ABOUT & SERVICES --- */
+        #about {
+            padding: 8rem 0;
+            background-color: #0e0e0e;
+            border-top: 1px solid #1a1a1a;
+        }
+
+        .about-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+        }
+
+        .about-text p {
+            color: #a0a0a0;
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+
+        .services-list h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            border-left: 3px solid #ff3366;
+            padding-left: 10px;
+        }
+
+        .services-list ul li {
+            margin-bottom: 1rem;
+            color: #d4d4d4;
+            font-size: 1.05rem;
+        }
+
+        /* --- CONTACT SECTION --- */
+        #contact {
+            padding: 8rem 0;
+            text-align: center;
+            border-top: 1px solid #1a1a1a;
+        }
+
+        #contact p {
+            color: #a0a0a0;
+            max-width: 600px;
+            margin: 0 auto 2.5rem auto;
+            font-size: 1.2rem;
+        }
+
+        .email-link {
+            font-size: 2rem;
+            font-weight: 800;
+            color: #ffffff;
+            border-bottom: 2px solid #ff3366;
+            padding-bottom: 5px;
+        }
+
+        .email-link:hover {
+            color: #ff3366;
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            padding: 3rem 0;
+            border-top: 1px solid #1a1a1a;
+            text-align: center;
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        /* --- RESPONSIVE MEDIA QUERIES --- */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none; /* Simplifies mobile layout for pure CSS template */
+            }
+
+            .hero-content h1 {
+                font-size: 2.8rem;
+            }
+
+            .portfolio-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .about-wrapper {
+                grid-template-columns: 1fr;
+                gap: 2.5rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .email-link {
+                font-size: 1.4rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav class="container">
+            <div class="logo"><a href="#">CREATIVE<span>.</span></a></div>
+            <ul class="nav-links">
+                <li><a href="#work">Work</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="hero">
+        <div class="container hero-content">
+            <h1>Hi, I'm Alex. I craft bold <span>visual identities</span> and digital experiences.</h1>
+            <p>Graphic Designer specializing in branding, UI/UX layouts, and high-impact digital art. Turning complex ideas into clean, functional visual systems.</p>
+            <a href="#work" class="btn">View My Work</a>
+        </div>
+    </section>
+
+    <section id="work">
+        <div class="container">
+            <h2 class="section-title">Selected Work</h2>
+            <div class="portfolio-grid">
+                
+                <div class="portfolio-item">
+                    <div class="portfolio-img">Project Image Placeholder 1</div>
+                    <div class="portfolio-info">
+                        <span>Branding / Identity</span>
+                        <h3>Lumina Tech Rebrand</h3>
+                    </div>
+                </div>
+
+                <div class="portfolio-item">
+                    <div class="portfolio-img">Project Image Placeholder 2</div>
+                    <div class="portfolio-info">
+                        <span>UI/UX Design</span>
+                        <h3>Mobile Banking Concept</h3>
+                    </div>
+                </div>
+
+                <div class="portfolio-item">
+                    <div class="portfolio-img">Project Image Placeholder 3</div>
+                    <div class="portfolio-info">
+                        <span>Editorial / Print</span>
+                        <h3>Vanguard Magazine Layout</h3>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-wrapper">
+                <div class="about-text">
+                    <p>I am a multidisciplinary graphic designer with over 4 years of experience partnering with startups and established brands to bring stories to life visually.</p>
+                    <p>My design philosophy is rooted in minimalism, striking typography, and purposeful layouts. I believe every pixel should serve a function and spark an emotion.</p>
+                </div>
+                <div class="services-list">
+                    <h3>What I Do</h3>
+                    <ul>
+                        <li>— Brand Architecture & Logo Design</li>
+                        <li>— High-Fidelity UI/UX Prototyping</li>
+                        <li>— Marketing Material & Print Design</li>
+                        <li>— Motion Graphics & Vector Illustration</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <h2 class="section-title">Let's Connect</h2>
+            <p>Have an exciting project in mind, or just want to say hello? Drop me a line and let's create something memorable together.</p>
+            <a href="mailto:hello@yourdomain.com" class="email-link">hello@yourdomain.com</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Alex Design. All rights reserved. 100% Free & Open Source.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
