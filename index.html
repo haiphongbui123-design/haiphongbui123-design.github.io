@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Minimalist Designer | Portfolio</title>
+    <title>Bui Hai Phong | Professional Portfolio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -19,8 +19,8 @@
 
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #ffffff; /* Bright White Background */
-            color: #1a1f2c; /* Deep Slate/Black Text for readability */
+            background-color: #ffffff; /* Crisp White Background */
+            color: #1e293b; /* Premium Dark Slate Text */
             line-height: 1.6;
             overflow-x: hidden;
         }
@@ -31,24 +31,21 @@
             transition: all 0.2s ease;
         }
 
-        ul {
-            list-style: none;
-        }
-
         .container {
             width: 90%;
-            max-width: 1100px;
+            max-width: 1050px;
             margin: 0 auto;
         }
 
         .section-title {
-            font-size: 2rem;
+            font-size: 1.8rem;
             font-weight: 800;
-            margin-bottom: 3rem;
+            margin-bottom: 2.5rem;
             text-transform: uppercase;
             letter-spacing: 1px;
             color: #0f172a;
-            position: relative;
+            border-left: 4px solid #2563eb; /* Corporate Blue Accent Bar */
+            padding-left: 15px;
         }
 
         /* --- NAVIGATION --- */
@@ -57,7 +54,7 @@
             top: 0;
             left: 0;
             width: 100%;
-            background-color: rgba(255, 255, 255, 0.9);
+            background-color: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(8px);
             z-index: 1000;
             border-bottom: 1px solid #e2e8f0;
@@ -72,13 +69,13 @@
 
         .logo {
             font-weight: 800;
-            font-size: 1.3rem;
+            font-size: 1.2rem;
             letter-spacing: -0.5px;
             color: #0f172a;
         }
 
         .logo span {
-            color: #2563eb; /* Vibrant Blue Accent */
+            color: #2563eb; /* Accent Color */
         }
 
         .nav-links {
@@ -96,245 +93,496 @@
             color: #2563eb;
         }
 
-        /* --- HERO SECTION --- */
-        #hero {
-            min-height: 90vh;
+        /* --- HOME SECTION --- */
+        #home {
+            min-height: 85vh;
             display: flex;
             align-items: center;
-            padding-top: 100px;
+            padding-top: 120px;
+            background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);
         }
 
-        .hero-content {
-            max-width: 750px;
+        .home-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 300px;
+            gap: 4rem;
+            align-items: center;
         }
 
-        .hero-content h1 {
-            font-size: 3.5rem;
+        .home-content h1 {
+            font-size: 3.2rem;
             font-weight: 800;
             line-height: 1.2;
-            margin-bottom: 1.5rem;
+            margin-bottom: 0.8rem;
             letter-spacing: -1.5px;
             color: #0f172a;
         }
 
-        .hero-content h1 span {
-            color: #2563eb;
-        }
-
-        .hero-content p {
+        .home-content .subtitle {
             font-size: 1.2rem;
-            color: #475569;
-            margin-bottom: 2.5rem;
-            font-weight: 400;
-            max-width: 600px;
-        }
-
-        .btn {
-            display: inline-block;
-            background-color: #2563eb; /* Blue Button */
-            color: #ffffff;
-            padding: 0.8rem 2.2rem;
+            color: #2563eb;
+            margin-bottom: 0.3rem;
             font-weight: 600;
-            font-size: 0.95rem;
-            border-radius: 6px;
-            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.15);
         }
 
-        .btn:hover {
-            background-color: #1d4ed8;
-            transform: translateY(-1px);
-            box-shadow: 0 6px 20px rgba(37, 99, 235, 0.25);
+        .home-content .tagline {
+            font-size: 1.05rem;
+            color: #475569;
+            margin-bottom: 1.5rem;
+            font-weight: 500;
         }
 
-        /* --- PORTFOLIO WORK GRID --- */
-        #work {
-            padding: 7rem 0;
-            border-top: 1px solid #f1f5f9;
+        .home-content .university {
+            font-size: 1.05rem;
+            color: #64748b;
+            margin-bottom: 2rem;
+            font-weight: 400;
         }
 
-        .portfolio-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 3rem;
+        .home-content .university span {
+            color: #0f172a;
+            font-weight: 600;
         }
 
-        .portfolio-item {
-            background-color: #ffffff;
-            overflow: hidden;
-            transition: all 0.3s ease;
+        .home-statement {
+            font-size: 1.05rem;
+            color: #334155;
+            border-left: 3px solid #e2e8f0;
+            padding-left: 20px;
+            margin-bottom: 2.5rem;
+            font-style: italic;
         }
 
-        /* Image box placeholder */
-        .portfolio-img {
-            width: 100%;
+        /* Profile Photo Frame */
+        .profile-frame {
+            width: 280px;
             height: 280px;
-            background-color: #f8fafc; /* Very light gray/blue placeholder */
-            border: 1px solid #e2e8f0;
-            border-radius: 8px;
+            border-radius: 50%;
+            border: 2px solid #2563eb;
+            background-color: #f1f5f9;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: #94a3b8;
-            font-weight: 500;
-            font-size: 0.9rem;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(37, 99, 235, 0.05);
+        }
+
+        .profile-img {
+            width: 100%;
+            height: 100%;
             object-fit: cover;
-            transition: all 0.3s ease;
-        }
-
-        .portfolio-item:hover .portfolio-img {
-            border-color: #2563eb;
-            box-shadow: 0 12px 30px rgba(37, 99, 235, 0.08);
-            transform: translateY(-4px);
-        }
-
-        .portfolio-info {
-            padding: 1.2rem 0 0 0;
-        }
-
-        .portfolio-info span {
-            color: #2563eb;
-            font-size: 0.8rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        .portfolio-info h3 {
-            font-size: 1.25rem;
-            color: #0f172a;
-            margin-top: 0.3rem;
-            font-weight: 600;
         }
 
         /* --- ABOUT SECTION --- */
         #about {
-            padding: 7rem 0;
-            background-color: #f8fafc; /* Extremely soft gray-blue tint for section separation */
-            border-top: 1px solid #e2e8f0;
-            border-bottom: 1px solid #e2e8f0;
+            padding: 6rem 0;
+            border-top: 1px solid #f1f5f9;
+            background-color: #ffffff;
         }
 
-        .about-wrapper {
-            display: grid;
-            grid-template-columns: 1.2fr 0.8fr;
-            gap: 5rem;
+        .about-box {
+            background-color: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 2.5rem;
+            margin-bottom: 2rem;
         }
 
-        .about-text p {
-            color: #334155;
-            margin-bottom: 1.5rem;
+        .about-box p {
             font-size: 1.1rem;
+            color: #334155;
+            line-height: 1.8;
+            text-align: justify;
         }
 
-        .services-list h3 {
-            font-size: 1.25rem;
-            margin-bottom: 1.5rem;
+        .about-details-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .detail-card {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            padding: 1.5rem;
+            border-radius: 6px;
+        }
+
+        .detail-card h3 {
+            font-size: 1.1rem;
+            color: #2563eb;
+            margin-bottom: 0.8rem;
+            font-weight: 700;
+        }
+
+        .detail-card p {
+            font-size: 0.95rem;
+            color: #475569;
+        }
+
+        /* --- EXPERIENCE SECTION --- */
+        #experience {
+            padding: 6rem 0;
+            background-color: #f8fafc;
+            border-top: 1px solid #e2e8f0;
+        }
+
+        .experience-timeline {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .experience-item {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 2.5rem;
+            transition: border-color 0.2s ease;
+        }
+
+        .experience-item:hover {
+            border-color: #2563eb;
+        }
+
+        .experience-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 1.2rem;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .experience-role h3 {
+            font-size: 1.3rem;
             color: #0f172a;
             font-weight: 700;
         }
 
-        .services-list ul li {
-            margin-bottom: 0.8rem;
-            color: #475569;
-            font-size: 1rem;
-            display: flex;
-            align-items: center;
+        .experience-role .company {
+            font-size: 1.05rem;
+            color: #2563eb;
+            font-weight: 600;
+            margin-top: 0.2rem;
         }
 
-        /* Blue minimalist bullet points */
-        .services-list ul li::before {
-            content: "•";
+        .experience-time {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: #64748b;
+            background-color: #f1f5f9;
+            padding: 4px 12px;
+            border-radius: 20px;
+        }
+
+        .experience-body p {
+            font-size: 1.05rem;
+            color: #334155;
+            margin-bottom: 1rem;
+            font-style: italic;
+        }
+
+        .experience-body ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .experience-body ul li {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 0.6rem;
+            font-size: 0.95rem;
+            color: #475569;
+        }
+
+        .experience-body ul li::before {
+            content: "→";
+            position: absolute;
+            left: 0;
             color: #2563eb;
             font-weight: bold;
-            display: inline-block; 
-            width: 1em;
-            margin-left: -0.2em;
+        }
+
+        /* --- MULTIMEDIA SHOWCASE SECTION --- */
+        #media {
+            padding: 6rem 0;
+            background-color: #ffffff;
+            border-top: 1px solid #f1f5f9;
+        }
+
+        .media-intro {
+            margin-bottom: 2.5rem;
+            font-size: 1.05rem;
+            color: #475569;
+            max-width: 750px;
+        }
+
+        .media-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        .media-card {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02);
+            transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .media-card:hover {
+            transform: translateY(-4px);
+            border-color: #2563eb;
+            box-shadow: 0 12px 20px rgba(37, 99, 235, 0.05);
+        }
+
+        .media-wrapper {
+            position: relative;
+            width: 100%;
+            height: 220px;
+            background-color: #0f172a;
+            overflow: hidden;
+        }
+
+        .media-wrapper img, .media-wrapper video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .media-caption {
+            padding: 1.2rem;
+            background: #ffffff;
+            border-top: 1px solid #f1f5f9;
+            flex-grow: 1;
+        }
+
+        .media-caption h4 {
+            font-size: 1rem;
+            color: #0f172a;
+            font-weight: 700;
+            margin-bottom: 0.3rem;
+        }
+
+        .media-caption p {
+            font-size: 0.85rem;
+            color: #64748b;
+            line-height: 1.4;
+        }
+
+        /* --- SKILLS SECTION --- */
+        #skills {
+            padding: 6rem 0;
+            background-color: #f8fafc; 
+            border-top: 1px solid #e2e8f0;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3.5rem;
+        }
+
+        .skills-column h3 {
+            font-size: 1.25rem;
+            color: #0f172a;
+            margin-bottom: 1.8rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .skills-column h3::after {
+            content: '';
+            flex-grow: 1;
+            height: 1px;
+            background-color: #cbd5e1;
+        }
+
+        .skill-card {
+            margin-bottom: 1.2rem;
+            background-color: #ffffff;
+            border: 1px solid #e2e8f0;
+            padding: 1.5rem;
+            border-radius: 6px;
+            transition: all 0.2s ease;
+        }
+
+        .skill-card:hover {
+            border-color: #2563eb;
+            box-shadow: 0 8px 20px rgba(37, 99, 235, 0.05);
+            transform: translateY(-2px);
+        }
+
+        .skill-card h4 {
+            font-size: 1.05rem;
+            color: #0f172a;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        .skill-card h4 span {
+            background-color: #dbeafe;
+            color: #2563eb;
+            font-size: 0.75rem;
+            padding: 2px 8px;
+            border-radius: 20px;
+            margin-left: 8px;
+            display: inline-block;
+        }
+
+        .skill-card p {
+            font-size: 0.95rem;
+            color: #475569;
         }
 
         /* --- CONTACT SECTION --- */
         #contact {
-            padding: 8rem 0;
+            padding: 6rem 0;
+            background-color: #ffffff;
+        }
+
+        .contact-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 4rem;
+        }
+
+        .contact-info-box h3 {
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            color: #0f172a;
+        }
+
+        .contact-info-box p {
+            color: #475569;
+            margin-bottom: 2rem;
+        }
+
+        .direct-link {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #0f172a;
+        }
+
+        .direct-link span {
+            color: #2563eb;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            width: 60px;
+        }
+
+        .direct-link a:hover {
+            color: #2563eb;
+            text-decoration: underline;
+        }
+
+        /* Minimalist Contact Form */
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .form-group label {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: #475569;
+        }
+
+        .form-group input, .form-group textarea {
+            padding: 0.8rem;
+            border: 1px solid #cbd5e1;
+            border-radius: 6px;
+            font-family: inherit;
+            font-size: 0.95rem;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+
+        .form-group input:focus, .form-group textarea:focus {
+            border-color: #2563eb;
+        }
+
+        .submit-btn {
+            background-color: #2563eb;
+            color: #ffffff;
+            border: none;
+            padding: 0.9rem;
+            font-weight: 600;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+            font-size: 0.95rem;
             text-align: center;
         }
 
-        #contact p {
-            color: #475569;
-            max-width: 550px;
-            margin: 0 auto 2.5rem auto;
-            font-size: 1.15rem;
-        }
-
-        .email-link {
-            font-size: 2.2rem;
-            font-weight: 800;
-            color: #0f172a;
-            display: inline-block;
-            position: relative;
-            padding-bottom: 4px;
-        }
-
-        /* Animated minimalist underline for email */
-        .email-link::after {
-            content: '';
-            position: absolute;
-            width: 100%;
-            transform: scaleX(1);
-            height: 2px;
-            bottom: 0;
-            left: 0;
-            background-color: #2563eb;
-            transform-origin: bottom left;
-            transition: transform 0.25s ease-out;
-        }
-
-        .email-link:hover {
-            color: #2563eb;
-        }
-
-        .email-link:hover::after {
+        .submit-btn:hover {
             background-color: #1d4ed8;
         }
 
         /* --- FOOTER --- */
         footer {
             padding: 2.5rem 0;
-            border-top: 1px solid #f1f5f9;
+            border-top: 1px solid #e2e8f0;
+            background-color: #f8fafc;
             text-align: center;
             font-size: 0.85rem;
             color: #94a3b8;
-            font-weight: 400;
         }
 
         /* --- RESPONSIVE LAYOUTS --- */
-        @media (max-width: 768px) {
+        @media (max-width: 868px) {
+            .home-wrapper, .about-details-grid, .skills-grid, .contact-wrapper, .media-grid {
+                grid-template-columns: 1fr;
+                gap: 2.5rem;
+            }
+
+            .home-wrapper {
+                text-align: center;
+                flex-direction: column-reverse;
+            }
+
+            .profile-frame {
+                margin: 0 auto;
+            }
+
+            .home-statement {
+                border-left: none;
+                border-top: 2px solid #e2e8f0;
+                padding-left: 0;
+                padding-top: 15px;
+            }
+
             .nav-links {
-                display: none; /* Keeps mobile ultra-clean without complex JS */
+                display: none; /* Hidden on mobile for absolute minimalist constraint */
             }
 
-            .hero-content h1 {
-                font-size: 2.4rem;
-            }
-
-            .portfolio-grid {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-            }
-
-            .about-wrapper {
-                grid-template-columns: 1fr;
-                gap: 3rem;
-            }
-
-            .section-title {
-                font-size: 1.6rem;
-                margin-bottom: 2rem;
-            }
-
-            .email-link {
-                font-size: 1.35rem;
+            .home-content h1 {
+                font-size: 2.5rem;
             }
             
-            #hero, #work, #about, #contact {
+            #home, #about, #experience, #media, #skills, #contact {
                 padding: 4rem 0;
             }
         }
@@ -344,88 +592,227 @@
 
     <header>
         <nav class="container">
-            <div class="logo"><a href="#">STUDIO<span>.</span></a></div>
+            <div class="logo"><a href="#home">BUI HAI PHONG<span>.</span></a></div>
             <ul class="nav-links">
-                <li><a href="#work">Selected Work</a></li>
+                <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#media">Events</a></li>
+                <li><a href="#skills">Skills</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <section id="hero">
-        <div class="container hero-content">
-            <h1>Hi, I'm a Graphic Designer crafting minimalist <span>visual assets</span>.</h1>
-            <p>Focused on clean layouts, striking brand systems, and deliberate typography. Turning creative briefs into functional design realities.</p>
-            <a href="#work" class="btn">Explore Work</a>
-        </div>
-    </section>
-
-    <section id="work">
-        <div class="container">
-            <h2 class="section-title">Selected Work</h2>
-            <div class="portfolio-grid">
+    <section id="home">
+        <div class="container home-wrapper">
+            <div class="home-content">
+                <h1>Bui Hai Phong</h1>
+                <p class="subtitle">Aspiring Wealth Management Professional</p>
+                <p class="tagline">English Teacher & IELTS Instructor</p>
+                <p class="university">First-Year Student at <span>Foreign Trade University (FTU)</span></p>
                 
-                <div class="portfolio-item">
-                    <div class="portfolio-img">Project Canvas Preview 1</div>
-                    <div class="portfolio-info">
-                        <span>Brand Identity</span>
-                        <h3>Aero Systems Logo & Strategy</h3>
-                    </div>
+                <div class="home-statement">
+                    "As an aspiring Wealth Management professional, my target is to launch my career as a Priority Bank Clerk, managing relationships and financial portfolios for affluent and high-net-worth individuals..."
                 </div>
-
-                <div class="portfolio-item">
-                    <div class="portfolio-img">Project Canvas Preview 2</div>
-                    <div class="portfolio-info">
-                        <span>Digital Layout</span>
-                        <h3>Modern Editorial Book Design</h3>
-                    </div>
-                </div>
-
-                <div class="portfolio-item">
-                    <div class="portfolio-img">Project Canvas Preview 3</div>
-                    <div class="portfolio-info">
-                        <span>Packaging</span>
-                        <h3>Minimalist Cosmetics Box Kit</h3>
-                    </div>
-                </div>
-
+                
+                <a href="#about" class="submit-btn" style="display:inline-block; padding: 0.8rem 2rem;">Learn More</a>
+            </div>
+            
+            <div class="profile-frame">
+                <img src="avatar.png" alt="Bui Hai Phong" class="profile-img" onerror="this.src='https://via.placeholder.com/280';">
             </div>
         </div>
     </section>
 
     <section id="about">
         <div class="container">
-            <div class="about-wrapper">
-                <div class="about-text">
-                    <h2 class="section-title" style="margin-bottom: 1.5rem;">The Studio</h2>
-                    <p>I operate a design methodology based entirely around clarity, grid execution, and structural purpose. Your brand tells a story, and my objective is to clean up the noise so that story resonates perfectly.</p>
-                    <p>From custom color frameworks to layout scaling, I map out physical and digital designs intended to stay modern for years to come.</p>
+            <h2 class="section-title">About Me</h2>
+            <div class="about-box">
+                <p><strong>Career Goals Statement:</strong> "As an aspiring Wealth Management professional, my target is to launch my career as a Priority Bank Clerk, managing relationships and financial portfolios for affluent and high-net-worth individuals. I chose this path because it perfectly bridges my passion for financial market analysis with my commitment to delivering elite, bespoke client service. I believe that wealth management is fundamentally built on trust, meticulous attention to detail, and proactive problem-solving. My goal is to leverage my academic foundation in finance and hands-on internship experience to provide seamless operational support, cultivate long-term client loyalty, and ultimately grow into a trusted Relationship Manager within premium banking."</p>
+                <br>
+                <p>Alongside my structured academic trajectory in Finance at Foreign Trade University, I hold a deep-rooted passion for education and linguistics. Achieving an <strong>IELTS Band 8.0</strong> served as a strong catalyst, allowing me to guide numerous students through their test preparation journeys as an instructor. Merging logical financial thinking with refined pedagogical communication skills enables me to distill complex concepts effortlessly, empathize deeply with clients/students, and maintain meticulous attention to detail under high-pressure corporate environments.</p>
+            </div>
+
+            <div class="about-details-grid">
+                <div class="detail-card">
+                    <h3>Financial Direction</h3>
+                    <p>Focusing strictly on asset management models, comprehensive market metrics tracking, and constructing high-value client care principles unique to Premium and Priority banking frameworks.</p>
                 </div>
-                <div class="services-list">
-                    <h3>Core Capabilities</h3>
-                    <ul>
-                        <li>Brand Guidelines & Logo Systems</li>
-                        <li>Digital Layout & Editorial Print</li>
-                        <li>Vector Artwork & Signage</li>
-                        <li>UI Prototyping & Layout Direction</li>
-                    </ul>
+                <div class="detail-card">
+                    <h3>Educational Passion & Linguistics</h3>
+                    <p>Engaged heavily in formal English training and professional IELTS mentorship. Leveraging active instructional design to enhance global articulation competencies for modern learners.</p>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience">
+        <div class="container">
+            <h2 class="section-title">Professional Experience</h2>
+            <div class="experience-timeline">
+                
+                <div class="experience-item">
+                    <div class="experience-header">
+                        <div class="experience-role">
+                            <h3>English Teacher / IELTS Instructor</h3>
+                            <div class="company">Freelance / Center-Based Academic Mentorship</div>
+                        </div>
+                        <span class="experience-time">Present</span>
+                    </div>
+                    <div class="experience-body">
+                        <p>Directly managing academic cohorts, implementing customized structural blueprints, and guiding candidates toward achieving performance goals for international standardized evaluations.</p>
+                        <ul>
+                            <li><strong>Personalized Strategy Structuring:</strong> Evaluated individualized learner profiles to establish optimized testing parameters across all four core modules, heavily driving analytical reasoning within Speaking and Writing.</li>
+                            <li><strong>Curriculum & Material Engineering:</strong> Compiled and cross-referenced comprehensive textual resources, distilling advanced syntax structures and complex lexical items into highly scannable, intuitive learning assets.</li>
+                            <li><strong>Inspirational Educational Leadership:</strong> Deployed high-interaction pedagogical frameworks to sustain engagement, fostering a profound accountability culture while steering students strictly toward certified benchmark targets.</li>
+                            <li><strong>Interpersonal Skill Hardening:</strong> Utilized the instructional ecosystem to master public speaking, precise calendar scheduling, and fluid crisis management under rigorous timelines.</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="media">
+        <div class="container">
+            <h2 class="section-title">Academic Events & Media</h2>
+            <div class="media-intro">
+                <p>Visual highlights from a student-driven information exchange event focused on advanced IELTS teaching strategies and learning methodologies, hosted alongside academic peers to empower modern language learners.</p>
+            </div>
+            
+            <div class="media-grid">
+                <div class="media-card">
+                    <div class="media-wrapper">
+                        <img src="event-photo1.jpg" alt="IELTS Seminar Presentation" onerror="this.src='https://via.placeholder.com/500x350?text=Event+Photo+1';">
+                    </div>
+                    <div class="media-caption">
+                        <h4>Interactive Workshop Session</h4>
+                        <p>Presenting strategic test-taking metrics and breakdown models directly to students during our collaborative presentation panel.</p>
+                    </div>
+                </div>
+
+                <div class="media-card">
+                    <div class="media-wrapper">
+                        <img src="event-photo2.jpg" alt="IELTS Seminar Group Discussion" onerror="this.src='https://via.placeholder.com/500x350?text=Event+Photo+2';">
+                    </div>
+                    <div class="media-caption">
+                        <h4>Peer Exchange & Mentorship</h4>
+                        <p>Facilitating open-floor resource exchanges and live strategic mapping loops alongside fellow organizers and student cohorts.</p>
+                    </div>
+                </div>
+
+                <div class="media-card">
+                    <div class="media-wrapper">
+                        <video controls poster="https://via.placeholder.com/500x350?text=Play+Event+Highlights">
+                            <source src="event-video.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div class="media-caption">
+                        <h4>Event Keynote Highlights</h4>
+                        <p>A brief documentation video highlighting speaker transitions, student inquiries, and core educational strategies mapped out at the seminar.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills">
+        <div class="container">
+            <h2 class="section-title">Skills & Competencies</h2>
+            <div class="skills-grid">
+                
+                <div class="skills-column">
+                    <h3>Core Competencies</h3>
+                    
+                    <div class="skill-card">
+                        <h4>Advanced Professional Communication <span>IELTS 8.0</span></h4>
+                        <p>Possess full operational command of the English language. Highly capable of handling complex, nuanced, and formal correspondence with local and international affluent clients.</p>
+                    </div>
+
+                    <div class="skill-card">
+                        <h4>English Teaching & IELTS Instruction <span>Pedagogy</span></h4>
+                        <p>Proficient in modern instructional frameworks, visual learning deployment, and mapping out standardized test-taking logic systematically and compellingly.</p>
+                    </div>
+
+                    <div class="skill-card">
+                        <h4>Client Relations & Interpersonal Skills</h4>
+                        <p>Strong active listening and relationship-building capabilities, essential for maintaining trust and absolute confidentiality with high-net-worth individuals (HNWIs).</p>
+                    </div>
+
+                    <div class="skill-card">
+                        <h4>Time Management & Organization</h4>
+                        <p>Adept at multitasking, optimizing class/corporate schedules, and keeping meticulous attention to micro-details in fast-paced financial settings.</p>
+                    </div>
+                </div>
+
+                <div class="skills-column">
+                    <h3>Technical & Digital Skills</h3>
+                    
+                    <div class="skill-card">
+                        <h4>Financial & Data Documentation</h4>
+                        <p>Proficient in Microsoft Excel for organizing client matrices, tracking quantitative metrics, and basic spreadsheet manipulation.</p>
+                    </div>
+
+                    <div class="skill-card">
+                        <h4>Professional Reporting & Correspondence</h4>
+                        <p>Skilled in Microsoft Word for drafting polished business memos, client briefs, curriculum guides, and official administrative documentation.</p>
+                    </div>
+
+                    <div class="skill-card">
+                        <h4>Digital Literacy & Cloud Platforms</h4>
+                        <p>Confident in navigating modern workplace ecosystems, including Google Workspace (Docs, Sheets, Drive), presentation tools, and virtual communication suites (Zoom, Microsoft Teams).</p>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
 
     <section id="contact">
         <div class="container">
-            <h2 class="section-title">Start a Project</h2>
-            <p>I am currently accepting select freelance roles and brand consultations. Reach out and let's structure your vision.</p>
-            <a href="mailto:design@yourdomain.com" class="email-link">design@yourdomain.com</a>
+            <h2 class="section-title">Professional Collaboration</h2>
+            
+            <div class="contact-wrapper">
+                <div class="contact-info-box">
+                    <h3>Connect With Me</h3>
+                    <p>Open to entry-level banking roles, wealth management internships, and professional English education partnerships. Reach out directly via:</p>
+                    
+                    <div class="direct-link">
+                        <span>Phone</span>
+                        <a href="tel:0827537569">0827537569</a>
+                    </div>
+                    
+                    <div class="direct-link">
+                        <span>Email</span>
+                        <a href="mailto:haiphongbui123@gmail.com">haiphongbui123@gmail.com</a>
+                    </div>
+                </div>
+                
+                <form class="contact-form" action="https://formspree.io/f/placeholder" method="POST" onsubmit="alert('Thank you for your message! I will get back to you as soon as possible.'); return false;">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" required placeholder="John Doe">
+                    </div>
+                    <div class="form-group">
+                        <label for="user-email">Email Address</label>
+                        <input type="email" id="user-email" required placeholder="your-email@example.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message / Engagement Proposal</label>
+                        <textarea id="message" rows="4" required placeholder="Outline your message or project here..."></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </div>
         </div>
     </section>
 
     <footer>
         <div class="container">
-            <p>&copy; 2026 Portfolio Studio. Built with absolute minimalism.</p>
+            <p>&copy; 2026 Bui Hai Phong | Foreign Trade University (FTU). All rights reserved.</p>
         </div>
     </footer>
 
