@@ -323,6 +323,7 @@
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 2rem;
+            align-items: start; /* Dynamic alignment handles variations beautifully */
         }
 
         .media-card {
@@ -342,15 +343,41 @@
             box-shadow: 0 12px 20px rgba(37, 99, 235, 0.05);
         }
 
-        .media-wrapper {
+        /* Responsive aspect ratio wrappers tailored to your real media dimensions */
+        .photo-wrapper {
             position: relative;
             width: 100%;
-            height: 220px;
-            background-color: #0f172a;
+            background-color: #f8fafc;
             overflow: hidden;
         }
 
-        .media-wrapper img, .media-wrapper video {
+        /* Matches your horizontal landscape group picture */
+        .photo-wrapper.landscape {
+            aspect-ratio: 4 / 3;
+        }
+
+        /* Matches your vertical workspace table photo perfectly */
+        .photo-wrapper.portrait {
+            aspect-ratio: 3 / 4;
+        }
+
+        .photo-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* Matches your vertical recap video asset */
+        .video-wrapper {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 9 / 16;
+            background-color: #000000;
+            overflow: hidden;
+        }
+
+        .video-wrapper video {
             width: 100%;
             height: 100%;
             object-fit: cover;
@@ -684,35 +711,35 @@
             
             <div class="media-grid">
                 <div class="media-card">
-                    <div class="media-wrapper">
-                        <img src="event-photo1.jpg" alt="IELTS Seminar Presentation" onerror="this.src='https://via.placeholder.com/500x350?text=Event+Photo+1';">
+                    <div class="photo-wrapper landscape">
+                        <img src="event-photo1.jpg" alt="IELTS Seminar Group Milestone" onerror="this.src='https://via.placeholder.com/600x450?text=Landscape+Photo';">
                     </div>
                     <div class="media-caption">
-                        <h4>Interactive Workshop Session</h4>
-                        <p>Presenting strategic test-taking metrics and breakdown models directly to students during our collaborative presentation panel.</p>
+                        <h4>IELTSnap Group Milestone</h4>
+                        <p>A collaborative team celebration following our community workshop panel, highlighting our shared goal: peer mentorship and exchange.</p>
                     </div>
                 </div>
 
                 <div class="media-card">
-                    <div class="media-wrapper">
-                        <img src="event-photo2.jpg" alt="IELTS Seminar Group Discussion" onerror="this.src='https://via.placeholder.com/500x350?text=Event+Photo+2';">
+                    <div class="photo-wrapper portrait">
+                        <img src="event-photo2.jpg" alt="IELTSnap Interactive Workspaces" onerror="this.src='https://via.placeholder.com/450x600?text=Portrait+Photo';">
                     </div>
                     <div class="media-caption">
-                        <h4>Peer Exchange & Mentorship</h4>
-                        <p>Facilitating open-floor resource exchanges and live strategic mapping loops alongside fellow organizers and student cohorts.</p>
+                        <h4>Active Workshop Teamwork</h4>
+                        <p>Student cohorts working dynamically in breakout teams on strategic language exercises during the formal presentation session.</p>
                     </div>
                 </div>
 
                 <div class="media-card">
-                    <div class="media-wrapper">
-                        <video controls poster="https://via.placeholder.com/500x350?text=Play+Event+Highlights">
+                    <div class="video-wrapper">
+                        <video controls poster="https://via.placeholder.com/500x888?text=Play+Event+Highlights">
                             <source src="event-video.mp4" type="video/mp4">
                             Your browser does not support the video tag.
                         </video>
                     </div>
                     <div class="media-caption">
-                        <h4>Event Keynote Highlights</h4>
-                        <p>A brief documentation video highlighting speaker transitions, student inquiries, and core educational strategies mapped out at the seminar.</p>
+                        <h4>IELTSnap Workshop Highlights</h4>
+                        <p><strong>"By learners, for learners."</strong> A comprehensive look into our interactive milestone panel, candidate activities, team strategy modules, and peer engagement circles.</p>
                     </div>
                 </div>
             </div>
