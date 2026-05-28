@@ -153,6 +153,32 @@
             font-style: italic;
         }
 
+        /* Premium Action Button Group */
+        .cta-group {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            color: #2563eb;
+            border: 2px solid #2563eb;
+            padding: 0.8rem 2rem;
+            font-weight: 600;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            font-size: 0.95rem;
+            text-align: center;
+            display: inline-block;
+        }
+
+        .btn-outline:hover {
+            background-color: #2563eb;
+            color: #ffffff;
+        }
+
         /* Profile Photo Frame */
         .profile-frame {
             width: 280px;
@@ -323,7 +349,7 @@
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 2rem;
-            align-items: start; /* Dynamic alignment handles variations beautifully */
+            align-items: start;
         }
 
         .media-card {
@@ -343,7 +369,6 @@
             box-shadow: 0 12px 20px rgba(37, 99, 235, 0.05);
         }
 
-        /* Responsive aspect ratio wrappers tailored to your real media dimensions */
         .photo-wrapper {
             position: relative;
             width: 100%;
@@ -351,12 +376,10 @@
             overflow: hidden;
         }
 
-        /* Matches your horizontal landscape group picture */
         .photo-wrapper.landscape {
             aspect-ratio: 4 / 3;
         }
 
-        /* Matches your vertical workspace table photo perfectly */
         .photo-wrapper.portrait {
             aspect-ratio: 3 / 4;
         }
@@ -368,7 +391,6 @@
             display: block;
         }
 
-        /* Matches your vertical recap video asset */
         .video-wrapper {
             position: relative;
             width: 100%;
@@ -601,8 +623,12 @@
                 padding-top: 15px;
             }
 
+            .cta-group {
+                justify-content: center;
+            }
+
             .nav-links {
-                display: none; /* Hidden on mobile for absolute minimalist constraint */
+                display: none;
             }
 
             .home-content h1 {
@@ -643,11 +669,14 @@
                     "As an aspiring Wealth Management professional, my target is to launch my career as a Priority Bank Clerk, managing relationships and financial portfolios for affluent and high-net-worth individuals..."
                 </div>
                 
-                <a href="#about" class="submit-btn" style="display:inline-block; padding: 0.8rem 2rem;">Learn More</a>
+                <div class="cta-group">
+                    <a href="#about" class="submit-btn" style="padding: 0.8rem 2rem;">Learn More</a>
+                    <a href="Bui_Hai_Phong_CV.pdf" download="Bui_Hai_Phong_CV.pdf" class="btn-outline">Download CV</a>
+                </div>
             </div>
             
             <div class="profile-frame">
-                <img src="avatar.png" alt="Bui Hai Phong" class="profile-img" onerror="this.src='https://via.placeholder.com/280';">
+                <img src="avatar.jpg" alt="Bui Hai Phong" class="profile-img" onerror="this.src='https://via.placeholder.com/280';">
             </div>
         </div>
     </section>
